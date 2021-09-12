@@ -1,0 +1,140 @@
+html {
+    height: 100%
+}
+
+body {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+}
+
+.calculadora {
+    border-radius: 22px;
+    width: 14.8rem;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    background-color:#9381F9;
+    font-family: 'Urbanist', sans-serif;
+    /*border: 1px solid #9381F9;*/
+}
+
+.calculadora__main-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #222328;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.inferior__button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 0.35rem;
+    background-color: #403F44;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.c-btn, .e-btn {
+    background-color: #9381F9;
+}
+
+.e-btn {
+    width: 6.5rem;
+    border-radius: 20px;
+}
+
+
+/*
+*/
+/*
+*/
+.calculadora__auxiliar-button {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    background-color:#9381F9;
+    border-radius: 20px 20px 0 0;
+}
+
+.calculadora__manuseador {
+    width: 100%;
+    text-align: center;
+}
+
+.calculadora__auxiliar-hidden {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    transition: all 2s linear;
+}
+
+.hidden__button {
+    width: 3rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0.35rem;
+    background-color: #9381F9;
+    border:none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+img {
+    margin-top: 8px;
+    width: 5%;
+}
+
+/*
+*/
+/*
+*/
+
+.calculadora__main-result {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    justify-content: space-around;
+    height: 7rem;
+    width: 100%;
+    border-radius: 15px 15px 10px 10px;
+    background-color: #222328;
+}
+
+.main__screen {
+    background-color: #222328;
+    border: none;
+    height: 4rem;
+    width: 70%;
+    font-size: 1.9rem;
+    text-align: end;
+    color: white;
+}
+
+.main_principal {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__equals {
+    font-size: 2rem;
+    color: white;
+}
+
+.main__auxiliar-screen {
+    background-color: #222328;
+    border: none;
+    text-align: end;
+    color: white;
+}
+
+.addHidden {
+    display: none;
+}
