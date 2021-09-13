@@ -35,12 +35,13 @@ function calculate(value) {
 
     // ARRUMAR PRA DPS DO IGUAL ZERAR A TELA
     if (value === '=') {
-        auxScreen.placeholder += screen.value + value + eval(screen.value) + " | ";
         if (screen.value != '') {
             try {
                 if (value.includes('.') || !Number.isInteger(eval(screen.value))) {
-                    screen.value = eval(screen.value).toFixed(2);
+                    auxScreen.placeholder += screen.value + value + eval(screen.value).toFixed(3) + " | ";
+                    screen.value = eval(screen.value).toFixed(3);
                 } else {
+                    auxScreen.placeholder += screen.value + value + eval(screen.value) + " | ";
                     screen.value = eval(screen.value);
                 }
             } catch (error) {

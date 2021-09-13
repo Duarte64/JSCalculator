@@ -138,3 +138,9 @@ img {
 .addHidden {
     display: none;
 }
+
+input[type="text"]::placeholder { 
+                  
+    /* Firefox, Chrome, Opera */
+    text-align: right;
+}
