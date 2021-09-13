@@ -1,24 +1,5 @@
-const button = document.querySelector(".auxiliar__arrow-img");
-const areaHidden = document.querySelector(".calculadora__auxiliar-hidden");
-
-button.addEventListener("click", function() {
-    
-    if (areaHidden.classList.contains("addHidden")) {
-        areaHidden.classList.remove("addHidden");
-    } else {
-        areaHidden.classList.add("addHidden");
-    }
-    
-});
-
 const screen = document.querySelector(".main__screen");
-const auxScreen = document.querySelector(".main__auxiliar-screen");
-const clear = document.querySelector(".c-btn");
-
-clear.addEventListener('click', function() {
-    screen.value = '';
-});
-
+var reset = false;
 function calculate(value) {
 
     if ((value == 0 || (typeof value != 'number')) && screen.value == '') {
@@ -35,13 +16,14 @@ function calculate(value) {
 
     // ARRUMAR PRA DPS DO IGUAL ZERAR A TELA
     if (value === '=') {
+        reset = true;
         if (screen.value != '') {
             try {
                 if (value.includes('.') || !Number.isInteger(eval(screen.value))) {
-                    auxScreen.placeholder += screen.value + value + eval(screen.value).toFixed(3) + " | ";
+                    showAuxScreen(screen.value, eval(screen.value).toFixed(3));
                     screen.value = eval(screen.value).toFixed(3);
                 } else {
-                    auxScreen.placeholder += screen.value + value + eval(screen.value) + " | ";
+                    showAuxScreen(screen.value, eval(screen.value));
                     screen.value = eval(screen.value);
                 }
             } catch (error) {
@@ -51,7 +33,37 @@ function calculate(value) {
         }
     } else if (value == '%') {
         screen.value = eval(screen.value) / 100;
+        reset = true;
+    } else if (value == 'elevate') {
+        reset = true;
+        try {
+            screen.value = eval(screen.value) * eval(screen.value);
+        } catch (error) {
+            screen.value = "error ಠ_ಠ";
+        }
+    } else if (value == 'root') {
+        reset = true;
+        try {
+            screen.value = Math.sqrt(eval(screen.value));
+        } catch (error) {
+            screen.value = "error ಠ_ಠ";
+        }
     } else {
-        screen.value += value;
+        if (reset == true && Number.isInteger(value)) {
+            screen.value = '';
+            screen.value += value; 
+            reset = false;   
+        } else {
+            reset = false;
+            screen.value += value;
+        }
     }
 }
+
+// Clear the Screen.
+
+const clear = document.querySelector(".c-btn");
+
+clear.addEventListener('click', function() {
+    screen.value = '';
+});
