@@ -1,5 +1,5 @@
 const button = document.querySelector(".auxiliar__arrow-img");
-const areaHidden = document.querySelector(".calculadora__auxiliar-hidden");
+const areaHidden = document.querySelector(".auxiliar__hidden");
 
 button.addEventListener("click", function() {
     
