@@ -1,0 +1,25 @@
+/* ESTILO DA PARTE INFERIOR E COM OS BOTÕES PRINCIPAIS */
+
+.inferior {
+
+    &__button {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin: 0.35rem;
+        background-color: $light-grey;
+        color: $white;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    .c-btn, .e-btn {
+        background-color: $purple;
+    }
+    
+    .e-btn {
+        width: 6.5rem;
+        border-radius: 20px;
+    }
+
+}

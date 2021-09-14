@@ -1,0 +1,34 @@
+/* ESTILO DA PARTE SUPERIOR DA CALCULADORA */
+
+.main {
+
+    &__auxiliar-screen {
+        background-color: $dark-grey;
+        border: none;
+        text-align: end;
+        color: $white;
+    }
+
+    &__principal {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__equals {
+        font-size: 2rem;
+        color: $white;
+    }
+
+    &__screen {
+        background-color: $dark-grey;
+        border: none;
+        height: 4rem;
+        width: 70%;
+        font-size: 1.9rem;
+        text-align: end;
+        color: $white;
+    }
+
+}
