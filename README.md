@@ -19,7 +19,13 @@ Before you get started, it's necessary to have any browser of your preference, i
 
 ### Download and run!
 
-This project just needs to download and run in a browser, there's no additional step.
+This project just needs to download and run in a browser, there's no additional step. 
+
+```sh
+  $ git clone https://github.com/Duarte64/JSCalculator.git
+```
+
+Don't worry, you won't will nedd any dependencies.
 
 <img src="assets/images/giphy.gif">
 
