@@ -3,7 +3,7 @@
 
 <img src="https://img.shields.io/badge/license-MIT-green"> <img src="https://img.shields.io/github/stars/Duarte64/JSCalculator"> <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FDuarte64%2FJSCalculator">
 
-### ✅ Features
+## ✅ Features
 
 - [x] All basics mathematical operations
 - [x] Addition of Square Root and Power
