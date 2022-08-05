@@ -25,7 +25,7 @@ This project just needs to download and run in a browser, there's no additional 
   $ git clone https://github.com/Duarte64/JSCalculator.git
 ```
 
-Don't worry, you won't will nedd any dependencies.
+Don't worry, you won't will need any dependencies.
 
 <img src="assets/images/giphy.gif">
 
